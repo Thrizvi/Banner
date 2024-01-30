@@ -1,0 +1,16 @@
+var wlinux = g_form.getValue('location');
+   if (newValue == 'Windows' || newValue == 'Linux') {
+
+	if(wlinux == 'Chennai' || wlinux == 'Kohinoor City' || wlinux == 'Mumbai'){
+        g_form.clearValue('windows_linux');
+
+        var link = '<a href="https://nseindiadev.service-now.com/sp?id=sc_cat_item&sys_id=eb79293b87d5b9d0e1e833350cbb355c"> Automation of physical Server Request</a>';
+        g_form.showFieldMsg('windows_linux', "Windows/Linux is not supported, click on the above link to request ", 'error');
+
+        g_form.addInfoMessage("Windows/Linux is not supported, please use this link to submit new automation request" + link);
+
+		//g_form.setMandatory('hardware_model_manual',false);
+		//g_form.setDisplay('hardware_model_manual',false);
+		
+    }
+   }
